@@ -1,3 +1,21 @@
-.hidden {
-    display: hidden;
+body {
+    background-image: url(../images/wallpaper.jpg);
+    background-size: 100%;
+}
+
+.jumbotron {
+    background-color: transparent;
+    padding-top: 1em;
+    padding-bottom: 0px;
+}
+
+.size {
+    max-height: 275px;
+}
+
+#content {
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
