@@ -1,6 +1,9 @@
 body {
     background-image: url(../images/wallpaper.jpg);
     background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    min-width: 1200px;
 }
 
 .jumbotron {
@@ -19,3 +22,4 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+

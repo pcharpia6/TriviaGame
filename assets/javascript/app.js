@@ -131,6 +131,7 @@ function fail() {
 
 // response function if player runs out of time
 function timeUp() {
+    incorrect++;
     console.log("timeUp");
     whyEnd = "Time's up!";
     timerBetween = 4;
@@ -181,12 +182,9 @@ function nextQuestion() {
         question = true;
         pushQuestion();
         clearInterval(intervalId);
-        intervalId = setInterval(decrement, 1000);
-    }
+        intervalId = setInterval(decrement, 1000);}
     else {
-        endGame();
-    }
-    
+        endGame();}
 }
 
 function pushQuestion() {
@@ -199,6 +197,7 @@ function pushQuestion() {
     var txt4 = '<button type="button" class="btn btn-secondary btn-md btn-block text-left" id="2">' + questions[questionNum].answers[2] + '</button>';
     var txt5 = '<button type="button" class="btn btn-secondary btn-md btn-block text-left" id="3">' + questions[questionNum].answers[3] + '</button>';
     
+    $("#content").addClass("bg-light");
     $("#content").append(timeDisplay, txt1, txt2, txt3, txt4, txt5);
     $(".btn").click( function() {
         if ($(this).prop("id") === questions[questionNum].correct) {
